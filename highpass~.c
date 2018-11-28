@@ -54,7 +54,6 @@ static t_int *highpass_perform(t_int *w)
 		x->pole4 = x->pole3 * (1.0f - c) + x->pole4 * c;
 
 		//The subtraction causes the filter to do a highpass
-		//(Got the idea from musicdsp.org)
 		x->out1 = input - x->pole4;
 		*(out + sample_number) = x->out1;
 
